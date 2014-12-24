@@ -152,6 +152,9 @@ var RelateIQ = (function() {
     makeRequest('users/' + userid, {}, cb);
   };
 
+  RelateIQ.prototype.getList = function(listId, cb) {
+    makeRequest('lists/' + listId, {}, cb);
+  };
 
   RelateIQ.prototype.getLists = function(cb) {
     makeRequest('lists?_start=0&_limit=50', {}, cb);
